@@ -6,6 +6,9 @@ body {
 p {
   margin: 0px;
 }
+.container {
+  display: flex;
+}
 .header {
   height: 60px;
   background: #ffffff;
@@ -153,7 +156,7 @@ p {
 }
 
 .checkbox > span {
-  color: #34495E;
+  color: #34495e;
   padding: 0.25rem 0.25rem;
 }
 
@@ -163,7 +166,7 @@ p {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  border: 1px solid #34495E;
+  border: 1px solid #34495e;
   border-radius: 4px;
   outline: none;
   transition-duration: 0.3s;
@@ -345,6 +348,65 @@ label input[type="radio"]:checked ~ span::after {
 }
 .mb6 {
   margin-top: -6px;
+}
+
+.accordion {
+  width: 100%;
+  margin: 2rem auto;
+}
+
+.accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 1rem 0;
+}
+
+.accordion-item-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-top: 92px;
+  justify-content: space-between;
+  border-top: 1px solid #000000;
+  border-bottom: 1px solid #000000;
+  padding: 0px 16px 0px 16px;
+  font-weight: 600;
+  height: 56px;
+  background-color: #e6e6e6;
+}
+
+.accordion-item-header::after {
+  content: "\f078";
+  font-family: "fontawesome";
+  font-size: 14px;
+  position: absolute;
+  right: 1rem;
+  color: #808080;
+  font-weight: normal !important;
+}
+
+.accordion-item-header.active::after {
+  content: "\f078";
+  transform: rotate(180deg);
+  font-family: "fontawesome";
+}
+
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.accordion-item-body-content {
+  padding: 16px;
+  line-height: 24px;
+}
+
+@media (max-width: 767px) {
+  html {
+    font-size: 14px;
+  }
 }
 
 @media only screen and (max-width: 600px) {
