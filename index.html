@@ -8,7 +8,7 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap");
     </style>
-    <title>Document</title>
+    <title>Nab Trade</title>
   </head>
   <body>
     <header class="header">
@@ -17,13 +17,31 @@
       </div>
     </header>
     <main class="main">
+      <p class="headline">nabtrade email preference centre</p>
+      <div class="errorContainer">
+        <div><img src="./error-icon.svg" width="30" height="30" /></div>
+        <div class="errorInfo">
+          <p class="errorHeadline">Page errors</p>
+          <span class="errorSubHeading"
+            >You'll need to resolve a few things below before you can
+            continue</span
+          >
+          <div class="errorInfoDetails">
+            <div class="errorLinkContainer">
+              <span class="errorLinktext">Your email</span> -
+              <span class="errorInfoDetails"> We need your email </span>
+            </div>
+            <span class="errorLinktext">Make a selection</span> - Let us know
+            what you’d like to do
+          </div>
+        </div>
+      </div>
       <div class="container">
         <div class="infoContainer">
-          <p class="headline">nabtrade email preference centre</p>
           <p class="subtitle">
             You can choose what emails you would like to receive from us. Any
             information you provide is collected in accordance with
-            <span class="privacyNotification"
+            <a class="privacyNotification" target="_blank"
               >NAB’s Privacy Notification
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -39,12 +57,16 @@
                   fill="#C20000"
                 />
               </svg>
-            </span>
+            </a>
           </p>
           <div class="inputMail">
-            <label class="label" for="email">Your email</label>
+            <label class="label" for="email">Your email</label><br />
             <span class="emailValue">jane.smith@gmail.com</span>
             <input class="inputEmail" />
+            <div class="errmsg">
+              <img src="./error-icon.svg" width="20" height="20" /> Let us know
+              your email address
+            </div>
           </div>
 
           <div class="subscriptionSelection">
@@ -70,6 +92,10 @@
                     Unsubscribe from all non-service emails
                   </p>
                 </div>
+              </div>
+              <div class="errmsg">
+                <img src="./error-icon.svg" width="20" height="20" /> Let us
+                know what you’d like to do
               </div>
             </div>
           </div>

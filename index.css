@@ -59,6 +59,7 @@ p {
   display: inline-flex;
   align-items: center;
   gap: 3px;
+  cursor: pointer;
 }
 
 .inputMail {
@@ -206,9 +207,62 @@ p {
   margin-top: 10px;
 }
 
+.errorContainer {
+  margin-top: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 24px;
+  gap: 16px;
+  border: 1px solid #c20001;
+  border-radius: 8px;
+}
+.errorInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.errorHeadline {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 30px;
+  color: #000000;
+}
+.errorSubHeading {
+  margin-bottom: 4px;
+}
+.errorInfoDetails {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+}
+.errorLinktext {
+  color: #c20000;
+  text-decoration: underline;
+}
+.errorLinkContainer {
+  margin-bottom: 12px;
+}
+.errmsg {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #c20001;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 8px;
+  margin-top: 8px;
+}
 @media only screen and (max-width: 600px) {
   .main {
-    margin: 0px auto 0px auto;
+    margin: 1px auto 0px auto;
     padding: 30px 25px;
   }
   .imageContainer {
@@ -218,7 +272,7 @@ p {
     margin-left: 24px;
   }
   .inputEmail {
-    width: 375px;
+    width: 100%;
   }
   .emailSubscription {
     font-size: 26px;
