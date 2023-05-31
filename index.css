@@ -30,11 +30,19 @@ p {
   max-width: 551px;
 }
 
-.emailPrefrenceText {
+.headline {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 300;
   font-size: 40px;
+  line-height: 48px;
+  color: #000000;
+}
+.title {
+  font-family: "Source Sans Pro";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 32px;
   line-height: 48px;
   color: #000000;
 }
@@ -59,13 +67,14 @@ p {
   margin-top: 24px;
 }
 
-.emailLabel {
+.label {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
   color: #000000;
+  margin-top: 24px;
 }
 .inputEmail {
   box-sizing: border-box;
@@ -92,7 +101,10 @@ p {
   margin-top: 24px;
 }
 
-.serviceUpdateText {
+.subscriptionSelection {
+  margin-top: 24px;
+}
+.secondHeadline {
   margin-top: 16px;
   font-family: "Source Sans Pro";
   font-style: normal;
@@ -100,10 +112,6 @@ p {
   font-size: 14px;
   line-height: 16px;
   color: #000000;
-}
-
-.selectionContainer {
-  margin-top: 24px;
 }
 
 .selectionText {
@@ -115,20 +123,20 @@ p {
   color: #000000;
 }
 
-.radioContainer {
+.selectionContainer {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
-.radioBox {
+.box {
   padding: 12px;
   border: 1px solid #808080;
   border-radius: 4px;
   display: flex;
   gap: 15px;
 }
-.radioTitleText {
+.selectionTitleText {
   font-family: "Source Sans Pro";
   font-style: normal;
   font-weight: 400;
@@ -136,10 +144,12 @@ p {
   line-height: 24px;
 }
 
-.inputRadio {
+.inputRadioCheckboc {
   align-self: flex-start;
   min-width: 18px;
   min-height: 18px;
+  color: #000000;
+  background-color: #000000;
 }
 
 .nextButton {
@@ -190,4 +200,8 @@ p {
 .infoLink {
   color: #c20000;
   text-decoration: underline;
+}
+
+.managePreferencesContainer {
+  margin-top: 40px;
 }
