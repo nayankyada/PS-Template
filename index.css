@@ -157,7 +157,7 @@ p {
 
 .checkbox > span {
   color: #34495e;
-  padding: 0.25rem 0.25rem;
+  padding: 4px 4px;
 }
 
 .checkbox > input {
@@ -181,13 +181,15 @@ p {
 }
 
 .checkbox > input:checked + span::before {
-  content: "\2713";
+  content: "\f00c";
+  font-family: "fontawesome";
+  font-size: 15px;
   display: block;
   text-align: center;
   color: #fff;
   position: absolute;
-  left: 0.5rem;
-  top: 0.2rem;
+  left: 7px;
+  top: 5px;
 }
 
 .checkbox > input:active {
@@ -352,13 +354,13 @@ label input[type="radio"]:checked ~ span::after {
 
 .accordion {
   width: 100%;
-  margin: 2rem auto;
+  margin: 32px auto;
 }
 
 .accordion-item {
   background-color: #fff;
   color: #111;
-  margin: 1rem 0;
+  margin: 16px 0;
 }
 
 .accordion-item-header {
@@ -381,7 +383,7 @@ label input[type="radio"]:checked ~ span::after {
   font-family: "fontawesome";
   font-size: 14px;
   position: absolute;
-  right: 1rem;
+  right: 16px;
   color: #808080;
   font-weight: normal !important;
 }
