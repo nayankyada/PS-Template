@@ -127,12 +127,16 @@ p {
   flex-direction: column;
   gap: 8px;
 }
+.hide {
+  display: none;
+}
 .box {
   padding: 12px;
   border: 1px solid #808080;
   border-radius: 4px;
   display: flex;
   gap: 15px;
+  margin-bottom: 8px;
 }
 .selectionTitleText {
   font-family: "Source Sans Pro";
