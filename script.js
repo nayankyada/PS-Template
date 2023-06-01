@@ -25,19 +25,18 @@ function showUnSubscribeDiv() {
 }
 
 function validateEmailAddress(emailString) {
-  let atSymbol = emailString.indexOf("@");
-  let dot = emailString.indexOf(".");
-
-  if (atSymbol < 1) return false;
-  if (dot <= atSymbol + 2) return false;
-  if (dot === emailString.length - 1) return false;
-  return true;
+    var regexPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regexPattern.test(emailString);
 }
 
 function nextButtonAction() {
   let emailInput = document.getElementById("emailInput");
   let radioButtons = document.getElementsByName("subscriptionRadios");
   let emailResult = validateEmailAddress(emailInput.value);
+  var isChecked = false;
+  var radioValue = ""
+  var checkboxes = document.getElementsByClassName("check-box-input");
+  var selectedCheckboxes = [];
 
   if (!emailResult) {
     document.getElementById("emailAddressErr").style.display = "flex";
@@ -50,12 +49,31 @@ function nextButtonAction() {
   }
 
   for (i = 0; i < radioButtons.length; i++) {
-    if (!radioButtons[i].checked) {
-      document.getElementById("radioError").style.display = "flex";
-      document.getElementById("pageErrors").style.display = "flex";
-    } else if (radioButtons[i].checked) {
-      document.getElementById("radioError").style.display = "none";
-      document.getElementById("pageErrors").style.display = "none";
+    if (radioButtons[i].checked) {
+      radioValue = radioButtons[i].value
+      isChecked = true;
+      break;
     }
   }
+
+  if (!isChecked) {
+    document.getElementById("radioError").style.display = "flex";
+    document.getElementById("pageErrors").style.display = "flex";
+  } else {
+    document.getElementById("radioError").style.display = "none";
+    document.getElementById("pageErrors").style.display = "none";
+  }
+
+  for (var i = 0; i < checkboxes.length; i++) {
+    if (checkboxes[i].checked) {
+      selectedCheckboxes.push(checkboxes[i].value);
+    }
+  }
+
+  if(!emailResult || !isChecked){
+    return
+  }else{
+    window.location.href = `http://localhost:5500/success.html?type=${radioValue}`;
+  }
+
 }

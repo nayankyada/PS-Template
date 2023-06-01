@@ -82,7 +82,7 @@ p {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  padding: 12px 0px;
+  padding: 12px 12px;
   width: 395px;
   min-width: 250px;
   height: 48px;

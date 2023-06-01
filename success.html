@@ -14,6 +14,7 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <title>Nab Trade</title>
+
   </head>
   <body>
     <header class="header">
@@ -25,7 +26,7 @@
     <main class="main">
       <p class="headline">nabtrade email preference centre</p>
 
-      <div class="successContainer">
+      <div class="successContainer unsubscribe" id="unsubscribe">
         <div><img src="./Right.png" width="30" height="30" /></div>
         <div class="successInfo">
           <p class="successHeadline">You’ve successfully unsubscribed.</p>
@@ -43,13 +44,12 @@
         </div>
       </div>
 
-      <div class="successContainer">
+      <div class="successContainer subscribe" id="subscribe">
         <div><img src="./Right.png" width="30" height="30" /></div>
         <div class="successInfo">
           <p class="successHeadline">You’ve successfully updated your email preferences.</p>
           <p class="successInfoDetails">
             If you change your mind, visit the <span class="linktext">nabtrade preference centre </span>to manage your preferences at any time.
-            
           </p>
         </div>
       </div>
@@ -106,4 +106,6 @@
     </main>
   </body>
 </html>
-<script src="script.js"></script>
+
+<script defer src="script.js"></script>
+<script defer src="success.js"></script>
