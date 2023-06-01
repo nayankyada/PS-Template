@@ -89,7 +89,7 @@ p {
   background: #ffffff;
   border: 1px solid #808080;
   border-radius: 4px;
-  margin-top: 8px;
+  margin: 8px 0px;
 }
 
 .emailSubscription {
@@ -263,7 +263,6 @@ p {
 .errorContainer {
   margin-top: 40px;
   box-sizing: border-box;
-  display: flex;
   flex-direction: row;
   align-items: flex-start;
   padding: 24px;
@@ -307,11 +306,9 @@ p {
   font-size: 16px;
   line-height: 24px;
   color: #c20001;
-  display: flex;
   align-items: center;
   justify-content: flex-start;
   gap: 8px;
-  margin-top: 8px;
 }
 label input[type="radio"] {
   display: none;

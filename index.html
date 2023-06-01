@@ -22,7 +22,7 @@
     </header>
     <main class="main">
       <p class="headline">nabtrade email preference centre</p>
-      <div class="errorContainer">
+      <div id="pageErrors" class="errorContainer hide">
         <div><img src="./error-icon.svg" width="30" height="30" /></div>
         <div class="errorInfo">
           <p class="errorHeadline">Page errors</p>
@@ -65,9 +65,14 @@
           </p>
           <div class="inputMail">
             <label class="label" for="email">Your email</label><br />
-            <span class="emailValue">jane.smith@gmail.com</span>
-            <input class="inputEmail" />
-            <div class="errmsg">
+            <span id="emailValue" class="emailValue"></span>
+            <input
+              id="emailInput"
+              type="email"
+              name="emailAddress"
+              class="inputEmail"
+            />
+            <div id="emailAddressErr" class="errmsg hide">
               <img src="./error-icon.svg" width="20" height="20" /> Let us know
               your email address
             </div>
@@ -113,7 +118,7 @@
                   </p>
                 </div>
               </div>
-              <div class="errmsg">
+              <div id="radioError" class="errmsg hide">
                 <img src="./error-icon.svg" width="20" height="20" /> Let us
                 know what you’d like to do
               </div>
@@ -173,8 +178,7 @@
               </div>
             </div>
           </div>
-
-          <button class="nextButton">Next</button>
+          <button class="nextButton" onclick="nextButtonAction();">Next</button>
         </div>
         <div class="imageContainer">
           <img class="image" src="./Round.png" width="200" height="200" />
